@@ -31,7 +31,6 @@ C/C++ database arduino rasberrypi Iot class....
     - 유저 만들어서 권한 설정하기;
         - grant all privileges on *.* to 'root'@localhost' identified by '1234';
     - windows cli에서 testDB 생성하기
-    
 sudo apt-get install git
 git clone https://github.com/mattsum/kulotBigdataclass.git
 ```
