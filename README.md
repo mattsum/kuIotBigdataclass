@@ -35,3 +35,44 @@ sudo apt-get install git
 git clone https://github.com/mattsum/kulotBigdataclass.git
 ```
 -...
+
+## 2024-02-23
+---
+
+    - my ubuntu 문제 해결
+    - 유저를 새로만들어서 권한을 주어 봤지만 해결되지 않음.
+    - 권한설정 및 user create 시
+        'ALTER USER 'root@localhost; Identified with mysql_native_password By '0000';, 명령어
+    - 추가한파일
+        - create_database.sql
+        - create_data.sql
+        - create_user.sql
+        - insert_data.sql
+        - select1.sql
+        - 파일을 한번에 저장했었는데, 제대로 저장 된건지 잘 모르겠음.
+        - 어제 한 데이터에서 책 133-159 마지막 'DESC' 까지 실습을 함.
+    - 3자 내용 추가
+        - 셀렉트 쓰는 방법
+    - 2장 데이터베이스 모델 진행
+        - 릴레이션의 개념 스키마&인스턴스
+            -릴래이션용어 CREATE TABLE, INSERT, DELETE, UPDATE, SELECT
+        - 무결성 제약조건 (키)
+            - 슈퍼키 후보키 기본키 대리키 대체키 외래키
+        - 관계대수 - 연산자 관계대수식 
+        - 셀렉션과 프로젝션
+        - 집합연산
+            - 합집합, 교집합, 차집합, 카티션프로덕트
+        - 조인 (세타조인과 동등조인)
+            - 자연조인 외부조인과 세미조인
+        - 디비전
+    - 3장 SQL 기초 _ group by 165p까지 진행
+    - 윈도우 DMBS를 우분투에서 연결
+        - 윈도우 DBMS에 외부 IP; 접근 가능한 user 생성
+        - 윈도우 방화벽에 3306 포트열기
+        - 윈도우 DBMS에 임의의 데이터를 넣고 우분투에서 확인
+    - 우분투 DBMS를 윈도우에 연결
+        - 우분투 DBMS에 외부IP 접근가능한 user 생성
+        - 우분투 방화벽에 전체포트열기
+        - 우분투 DBMS에 임의이 데이터 넣고 윈도우에서 확인
+            - vertualbox 프로그램에서는 windows로 가는 Ping이 진행되지않음 (학생들이 직접확인 하지 못함)
+            - VMware 프로그램에서는 windows로 가는 ping 이 잘됨 (프로젝트 화면으로만 보여만 줌)
