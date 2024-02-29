@@ -1,4 +1,4 @@
-# kulotBigdataclass
+# kuIotBigdataclass
 C/C++ database arduino rasberrypi Iot class....
 
 ---
@@ -88,3 +88,18 @@ git clone https://github.com/mattsum/kulotBigdataclass.git
             - 연속 실행
             - 생략가능 명령어
             - 변수 사용
+        - 3장 SQL 기초 전체 진행 [너무 어렵다]
+            - 데이터 조작어 검색
+                - SELECT 문
+                - 집계함수와 GROUP BY
+                - 두 개 이상의 테이블을 이용한 sql질의
+            - 데이터 정의어
+                - CREATE ALTER DROP
+            - 데이터 조작어
+                - INSERT UPDATE DELETE
+        - 4장 SQL 고급 진행
+            -SQL 내장함수
+                -숫자함수
+                -문자열함수
+                -날짜함수
+                -format 형식 %Y%m%d 등등 새롭게 표현하는식

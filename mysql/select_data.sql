@@ -60,3 +60,11 @@ from Orders;
 select count(*) from Orders;
 select count(*) from Customer;
 select count(phone) from Customer;
+
+-- example 3-19
+select sum(saleprice) 총매출, count(*) 권수 from Orders group by custid;
+select sum(saleprice) 총매출, count(*) 권수 
+from Orders 
+where saleprice >=8000
+	group by custid
+    having count(
