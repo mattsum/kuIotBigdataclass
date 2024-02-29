@@ -76,3 +76,15 @@ git clone https://github.com/mattsum/kulotBigdataclass.git
         - 우분투 DBMS에 임의이 데이터 넣고 윈도우에서 확인
             - vertualbox 프로그램에서는 windows로 가는 Ping이 진행되지않음 (학생들이 직접확인 하지 못함)
             - VMware 프로그램에서는 windows로 가는 ping 이 잘됨 (프로젝트 화면으로만 보여만 줌)
+
+## 2024-02-29
+---
+        - 빌드 과정 설명
+            - make cmake for linux
+            - 전처리 어셈블리 바이너리 링크
+        - VS Code Make 파일 하는 방법. 
+            - 기본 문법
+            - 여러개 명령어 등록
+            - 연속 실행
+            - 생략가능 명령어
+            - 변수 사용
