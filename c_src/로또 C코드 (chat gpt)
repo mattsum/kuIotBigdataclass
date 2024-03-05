@@ -1,0 +1,99 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define LOTTO_LENGTH 6
+#define BONUS_LENGTH 1
+
+// 로또 번호 선택 함수
+void selectLottoNumbers(int *numbers, int length) {
+    printf("Select %d numbers (1-45, no duplicates): ", length);
+    for (int i = 0; i < length; ++i) {
+        scanf("%d", &numbers[i]);
+    }
+}
+
+// 보너스 번호 선택 함수
+void selectBonusNumber(int *number) {
+    printf("Select bonus number (1-45): ");
+    scanf("%d", number);
+}
+
+// 번호 중복 확인 함수
+int hasDuplicates(int *numbers, int length, int newNumber) {
+    for (int i = 0; i < length; ++i) {
+        if (numbers[i] == newNumber) {
+            return 1;
+        }
+    }
+    return 0;
+}
+
+// 정답 번호 생성 함수
+void generateLottoNumbers(int *numbers, int length) {
+    srand(time(NULL));
+    for (int i = 0; i < length; ++i) {
+        int newNumber;
+        do {
+            newNumber = rand() % 45 + 1;
+        } while (hasDuplicates(numbers, i, newNumber));
+        numbers[i] = newNumber;
+    }
+}
+
+// 당첨 번호 확인 함수
+int checkWin(int *userNumbers, int *lottoNumbers, int length) {
+    int matched = 0;
+    for (int i = 0; i < length; ++i) {
+        for (int j = 0; j < length; ++j) {
+            if (userNumbers[i] == lottoNumbers[j]) {
+                matched++;
+                break;
+            }
+        }
+    }
+    return matched;
+}
+
+int main(void) {
+    int userNumbers[LOTTO_LENGTH];
+    int lottoNumbers[LOTTO_LENGTH];
+    int bonusNumber, matchedNumbers;
+
+    // 로또 번호 선택
+    selectLottoNumbers(userNumbers, LOTTO_LENGTH);
+    generateLottoNumbers(lottoNumbers, LOTTO_LENGTH);
+
+    // 보너스 번호 선택
+    selectBonusNumber(&bonusNumber);
+
+    // 정답 확인
+    matchedNumbers = checkWin(userNumbers, lottoNumbers, LOTTO_LENGTH);
+
+    // 결과 출력
+    printf("Your lotto numbers: ");
+    for (int i = 0; i < LOTTO_LENGTH; ++i) {
+        printf("%d ", userNumbers[i]);
+    }
+    printf("\n");
+
+    printf("Lotto numbers: ");
+    for (int i = 0; i < LOTTO_LENGTH; ++i) {
+        printf("%d ", lottoNumbers[i]);
+    }
+    printf("\n");
+
+    printf("Bonus number: %d\n", bonusNumber);
+    printf("Matched numbers: %d\n", matchedNumbers);
+
+    // 보너스 게임 결과 출력
+    if (matchedNumbers == LOTTO_LENGTH && hasDuplicates(userNumbers, LOTTO_LENGTH, bonusNumber)) {
+        printf("Congratulations! You won the lotto and the bonus game!\n");
+    } else if (matchedNumbers == LOTTO_LENGTH) {
+        printf("Congratulations! You won the lotto!\n");
+    } else {
+        printf("Better luck next time!\n");
+    }
+
+    return 0;
+}
