@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "mysql.h": "c",
+        "string.h": "c"
+    },
+    "cmake.sourceDirectory": "/home/rio/kulotBigdataclass/python_C_mysql"
+}

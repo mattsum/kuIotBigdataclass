@@ -1,0 +1,1 @@
+select * from R1 where (A = 'a1') or (A = 'a2');
