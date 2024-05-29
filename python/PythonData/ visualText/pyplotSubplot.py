@@ -14,6 +14,8 @@ def main():
     ax[1,0].plot(X1, Y3)
     ax[1,1].plot(X1, Y4)
     plt.show()
+    plt.close()
+    
 
 if __name__ == "__main__":
     main()
