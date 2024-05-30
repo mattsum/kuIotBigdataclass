@@ -21,8 +21,6 @@ def main():
     print(mean_b := session_times[session_times.Page == "Page B"].Time.mean())
     print(mean_b - mean_a)
     
-    
-
     res = stats.ttest_ind
     # fig = plt.figure()
     # ax = fig.add_subplot()
