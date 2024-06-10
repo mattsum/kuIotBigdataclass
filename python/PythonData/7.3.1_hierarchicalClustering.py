@@ -9,7 +9,7 @@ def main():
 
     Z = linkage(df, method='ward')
     print(Z)
-    print(Z.shape)
+    print(Z.shape
     
     
     # cut dendrogram
